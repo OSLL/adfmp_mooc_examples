@@ -1,4 +1,3 @@
-package com.example.a2311
 
 open class Rectangle(var h: Int, var w: Int){
     open fun sq()=h*w
@@ -15,4 +14,14 @@ class magicMagicRect(h:Int, w:Int): Rectangle(h,w), Magic{
 
 interface Magic{
     fun Magic()=42
+}
+
+fun main() {
+    val r = Rectangle(5, 6)
+    println(r.sq())
+    val mR = magicRect(5, 6)
+    println(mR.sq())
+    val mmR = magicMagicRect(5, 6)
+    println(mmR.sq())
+
 }
